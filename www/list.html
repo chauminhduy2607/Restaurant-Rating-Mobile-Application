@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <div data-role="page" id="page-list">
+            <div data-role="header" data-position="fixed">
+                <h1>RESTAURANT LIST</h1>
+            </div>
+            <input type="text" id="search-name" onkeyup="searchRestaurant()" placeholder="Search for Restaurant.." title="Type in a name">
+            <hr>
+            <div data-role="main">
+              <ul data-role="listview" id="list" data-inset="true"></ul>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <nav data-role="navbar">
+                    <ul>
+                        <li><a href="index.html" rel="external" class="ui-btn ui-icon-plus ui-btn-icon-notext"></a></li>
+                        <li><a href="#" class="ui-btn-active ui-state-persist ui-btn ui-icon-grid ui-btn-icon-notext"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div data-role="page" id="page-detail">
+            <div data-role="header" data-position="fixed">
+                <h1>RESTAURANT DETAIL</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+              <form id="frm-detail">
+
+                  <div id="id" style="display: none;"></div>
+
+                  <label for="name">Restaurant Name</label>
+                  <input type="text" id="name" placeholder="Name" data-clear-btn="false" required>
+
+                  <label for="address">Restaurant Address</label>
+                  <input type="text" id="address" placeholder="Address" data-clear-btn="false" required>
+
+                  <label for="type">Restaurant Type</label>
+                  <input type="text" id="type" placeholder="Type" data-clear-btn="false" required>
+
+                  <label for="visit">Visit Time</label>
+                  <input type="date" id="visit" placeholder="Visit" data-clear-btn="false" required>
+
+                  <label for="price">Average Price</label>
+                  <input type="number" step="any" id="price" placeholder="Average Price" data-clear-btn="false" required>
+
+                  <label for="service">Service Rating</label>
+                  <select name="Service Rating" id="service" required data-clear-btn="false">
+                    <option value="">Service Rating</option>
+                    <option value="1">Not Recommend</option>
+                    <option value="2">Bad</option>
+                    <option value="3">Normal</option>
+                    <option value="4">Good</option>
+            
+                  </select>
+
+                  <label for="clean">Cleanliness Rating</label>
+                  <select name="Clean Rating" id="clean" required data-clear-btn="false">
+                    <option value="">Cleanliness Rating</option>
+                    <option value="1">Need to improve</option>
+                    <option value="2">Bad</option>
+                    <option value="3">Normal</option>
+                    <option value="4">Good</option>
+                   
+                  </select>
+
+                  <label for="food">Food Quality Rating</label>
+                  <select name="Food Rating" id="food" required data-clear-btn="false">
+                    <option value="">Food Quality Rating</option>
+                    <option value="1">Need to improve</option>
+                    <option value="2">Bad</option>
+                    <option value="3">Normal</option>
+                    <option value="4">Good</option>
+                    
+                  </select>
+
+                  <label for="reporter">Reporter</label>
+                  <input type="text" id="reporter" placeholder="Reporter" data-clear-btn="false" required>
+
+                  <fieldset class="ui-grid-a">
+                    <div class="ui-block-a"><button type="submit" id="btn-edit">Edit</button></div>
+                    <div class="ui-block-b"><button type="button" id="btn-delete">Delete</button></div>
+                  </fieldset>
+              </form>
+
+
+                <h2 style="float: left;">Notes</h2>
+                <div align="right" id="btn-add-notes"></div>
+                <div data-role="popup" id="frm-add-note" class="ui-corner-all">
+                    <form>
+                        <div style="padding: 25px;">
+                            <h3>Input note</h3>
+                            <div style="display: none;">
+                                <input type="text" id="txt-Id" readonly>
+                            </div>
+                            <textarea id="ta-note" cols="50" rows="5"></textarea>
+
+                            <div class="ui-grid-a">
+                                <div class="ui-block-a"><input type="submit" value="Add"></div>
+                                <div class="ui-block-b">
+                                    <a href="#" id="btn-clear" data-rel="back" class="ui-btn">Clear</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div style="clear: both;"><hr></div>
+
+                <em><div id="note"></div></em>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <nav data-role="navbar">
+                    <ul>
+                        <li><a href="index.html" rel="external" class="ui-btn ui-icon-plus ui-btn-icon-notext"></a></li>
+                        <li><a href="#" class="ui-btn-active ui-state-persist ui-btn ui-icon-grid ui-btn-icon-notext"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.mobile-1.4.5.js"></script>
+          <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

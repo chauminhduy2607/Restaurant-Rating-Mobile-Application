@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+      
+        <div data-role="page" id="page-create">
+            <div data-role="header" data-position="fixed">
+                <h1>CREATE NEW RESTAURANT</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <form id="frm-create">
+
+                    <input type="text" id="name" placeholder="Restaurant Name" required>
+                    <input type="text" id="address" placeholder="Restaurant Address" required>
+                    <input type="text" id="type" placeholder="Type" arequired>
+                    <input type="date" id="visit" placeholder="Vist Date" required>
+                    <input type="number" step="any" min=1 oninput="validity.valid||(value='');" id="price" placeholder="Average Price" required>
+
+                    <select name="Service Rating" id="service" required>
+                      <option value="">Service Rating</option>
+                      <option value="1">Need to improve</option>
+                      <option value="2">Bad</option>
+                      <option value="3">Normal</option>
+                      <option value="4">Good</option>
+                      
+                    </select>
+                    <select name="Clean Rating" id="clean" required>
+                      <option value="">Cleanliness Rating</option>
+                      <option value="1">Need to improve</option>
+                      <option value="2">Bad</option>
+                      <option value="3">Normal</option>
+                      <option value="4">Good</option>
+                      
+                    </select>
+                    <select name="Food Rating" id="food" required>
+                      <option value="">Food Quality Rating</option>
+                      <option value="1">Need to improve</option>
+                      <option value="2">Bad</option>
+                      <option value="3">Normal</option>
+                      <option value="4">Good</option>
+                      
+                    </select>
+
+                    <input type="text" id="reporter" placeholder="Reporter" required>
+                    <input type="submit" value="Create">
+                </form>
+
+                <form data-role="popup" id="frm-confirm" class="ui-corner-all">
+                  <h2>Confirm Information</h2>
+                  <hr>
+
+                  <table>
+                    <tr>
+                      <td><strong>Restaurant Name:</strong></td>
+                      <td id="name"></td>
+                    </tr>
+
+                    <tr>
+                      <td><strong>Restaurant Address:</strong></td>
+                      <td id="address"></td>
+                    </tr>
+
+                    <tr>
+                      <td><strong>Restaurant Type:</strong></td>
+                      <td id="type"></td>
+                    </tr>
+
+                    <tr>
+                      <td><strong>Visit Time:</strong></td>
+                      <td id="visit"></td>
+                    </tr>
+
+                    <tr>
+                      <td><strong>Average Price:</strong></td>
+                      <td id="price"></td>
+                    </tr>
+
+                    <tr>
+                      <td><strong>Service Rating:</strong></td>
+                      <td id="service"></td>
+                    </tr>
+
+                    <tr>
+                      <td><strong>Clean Rating:</strong></td>
+                      <td id="clean"></td>
+                    </tr>
+
+                    <tr>
+                      <td><strong>Food:</strong></td>
+                      <td id="food"></td>
+                    </tr>
+
+                    <tr>
+                      <td><strong>Reporter:</strong></td>
+                      <td id="reporter"></td>
+                    </tr>
+                  </table>
+                    <fieldset class="ui-grid-a">
+                    	<div class="ui-block-a"><input type="button" value="Edit" id="btn-edit"></div>
+                    	<div class="ui-block-b"><input type="submit" value="Submit"></div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <nav data-role="navbar">
+                    <ul>
+                        <li><a href="#" class="ui-btn-active ui-state-persist ui-btn ui-icon-plus ui-btn-icon-notext"></a></li>
+                        <li><a href="list.html" rel="external" class="ui-btn ui-icon-grid ui-btn-icon-notext"></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.mobile-1.4.5.js"></script>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

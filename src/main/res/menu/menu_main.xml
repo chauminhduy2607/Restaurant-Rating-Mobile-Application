@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mnu_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/menu_main_search" />
+    <item
+        android:id="@+id/mnu_rate"
+        android:icon="@drawable/ic_rate_review"
+        android:title="@string/menu_main_post_rates" />
+</menu>

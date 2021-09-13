@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">iRate</string>
+    <string name="menu_main_search">Search</string>
+    <string name="menu_main_post_rates">Post Rates</string>
+    <string name="search_hint">Enter restaurant name or reporter</string>
+    <string name="button_search">Search</string>
+</resources>
